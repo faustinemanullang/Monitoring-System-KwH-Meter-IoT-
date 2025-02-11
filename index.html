@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/fa/css/all.css" />
+		<link rel="stylesheet" href="css/bs/bootstrap.min.css" />
+		<title>POWER METER MONITORING</title>
+		<style>
+			body {
+				font-family: "Arial", sans-serif;
+				background-color: #f8f9fa;
+			}
+
+			.wrapper {
+				display: flex;
+				height: 100vh;
+			}
+
+			#sidebar {
+				background-color: white;
+				color: midnightblue;
+				padding: 4px;
+				width: 250px;
+				transition: all 0.3s;
+			}
+
+			#sidebar.active {
+				width: 0;
+				padding: 0px;
+				overflow-x: hidden;
+			}
+
+			#content {
+				flex: 1;
+				padding: 4px;
+			}
+			#judul {
+				font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+					"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+				font-size: 24px;
+				font-weight: 600;
+				text-align: center;
+				padding-bottom: 12px;
+			}
+			.card {
+				border: 1px solid #ddd;
+				padding: 15px;
+				margin-bottom: 15px;
+				background-color: #fff;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			}
+
+			.btn i {
+				margin-right: 16px; /* Sesuaikan spasi sesuai kebutuhan */
+			}
+
+			.btn {
+				text-align: left;
+			}
+
+			.cardBox {
+				display: flex;
+				justify-content: space-around;
+			}
+			.cardBox .box {
+				width: 24%;
+				text-align: center;
+			}
+			.cardBox #box {
+				width: 24%;
+				text-align: center;
+			}
+			td:nth-child(odd) {
+				width: 40%;
+			}
+
+			#popup {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 20px;
+				background-color: #fff;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				z-index: 1000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Sidebar -->
+			<nav id="sidebar">
+				<div class="sidebar-header">
+					<h5 style="text-align: center; margin-bottom: 30px; margin-top: 20px">
+						POWER METER MONITORING
+					</h5>
+				</div>
+				<!-- Add your sidebar content here -->
+				<ul class="list-unstyled components">
+					<li>
+						<a href="index.html"
+							><button type="button" class="btn btn-primary btn-block">
+								<span><i class="fas fa-home"></i></span> HOME
+							</button>
+						</a>
+					</li>
+					<li style="border-radius: 10px; color: darkgray; margin-top: 10px">
+						<a href="power.php"
+							><button type="button" class="btn btn-link btn-block">
+								<span><i class="fas fa-chart-line"></i></span> POWER CONSUMPTION
+							</button>
+						</a>
+					</li>
+					<li style="border-radius: 10px; color: darkgray; margin-top: 10px">
+						<a href="pm1.php"
+							><button type="button" class="btn btn-link btn-block">
+								<i class="fas fa-chart-line"></i> DATA LOG PM 1
+							</button></a
+						>
+					</li>
+					<li style="border-radius: 10px; color: darkgray; margin-top: 10px">
+						<a href="pm2.php"
+							><button type="button" class="btn btn-link btn-block">
+								<i class="fas fa-chart-line"></i> DATA LOG PM 2
+							</button></a
+						>
+					</li>
+					<li>
+						<img
+							src="assets/pm.png"
+							alt="logoo"
+							width="150px"
+							height="150px"
+							style="
+								margin-left: 40px;
+								margin-top: 50px;
+								margin-bottom: 30px;
+							" />
+					</li>
+
+					<li>
+						<button
+							onclick="openPopup()"
+							class="btn-success btn-block"
+							style="padding: 8px">
+							Setting Interval DB
+						</button>
+
+						<div
+							id="interval"
+							style="text-align: center; margin-top: 8px"></div>
+						<div
+							id="popup"
+							style="text-align: center; background-color: lightblue">
+							<b> Interval DB</b><br /><br />
+							<form id="dataForm">
+								<label for="value">VALUE:</label>
+								<input
+									type="number"
+									id="value"
+									name="value"
+									id="fdb"
+									required />
+								<br /><br />
+								<button
+									type="button"
+									onclick="submitForm()"
+									class="btn-success">
+									Submit
+								</button>
+								<button
+									onclick="closepopup()"
+									class="btn-default"
+									style="margin-left: 16px">
+									Close
+								</button>
+							</form>
+						</div>
+						<script>
+							function openPopup() {
+								document.getElementById("popup").style.display = "block";
+							}
+							function closepopup() {
+								document.getElementById("popup").style.display = "none";
+							}
+							function submitForm() {
+								var value = document.getElementById("value").value;
+
+								// Kirim data ke server menggunakan AJAX
+								var xhr = new XMLHttpRequest();
+								xhr.open("POST", "proses.php", true);
+								xhr.setRequestHeader(
+									"Content-Type",
+									"application/x-www-form-urlencoded"
+								);
+								xhr.onreadystatechange = function () {
+									if (xhr.readyState === 4 && xhr.status === 200) {
+										// Tindakan setelah data dikirim
+										alert(xhr.responseText);
+										document.getElementById("popup").style.display = "none";
+									}
+								};
+								xhr.send("value=" + value);
+							}
+						</script>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Content -->
+			<div id="content">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div class="container-fluid">
+						<!-- Hamburger Button -->
+						<button type="button" id="sidebarCollapse" class="btn">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div id="judul">LIVE MONITORING</div>
+						<div class="ml-2">
+							<img src="assets/logo.jpg" alt="Logo" width="50" height="50" />
+						</div>
+					</div>
+				</nav>
+
+				<!-- Cards -->
+				<div class="card">
+					<div id="judul">POWER METER 1</div>
+					<div class="cardBox">
+						<div class="card box" id="boxv1"></div>
+						<div class="card box" id="boxi1"></div>
+						<div class="card box" id="boxw1"></div>
+						<div class="card box" id="boxo1"></div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div id="judul">POWER METER 2</div>
+					<div class="cardBox">
+						<div class="card box" id="boxv2"></div>
+						<div class="card box" id="boxi2"></div>
+						<div class="card box" id="boxw2"></div>
+						<div class="card box" id="boxo2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script/jquery-3.2.1.slim.min.js"></script>
+		<script src="script/popper.min.js"></script>
+		<script src="script/bootstrap.min.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$("#sidebarCollapse").on("click", function () {
+					$("#sidebar").toggleClass("active");
+				});
+			});
+			$(document).ready(fetchAndDrawChart());
+			var f2 = (a) => {
+				return parseFloat(a.toFixed(1));
+			};
+			setInterval(fetchAndDrawChart, 2000);
+			function fetchAndDrawChart() {
+				// Replace the URL with your API endpoint
+				var apiUrl = "http://127.0.0.1:1880/live";
+
+				// Fetch data from the API
+				fetch(apiUrl)
+					.then((response) => response.json())
+					.then((data) => {
+						// Process the data and draw the chart and tables
+						console.log(data);
+						drawboxv1(data);
+						drawboxv2(data);
+						drawboxi1(data);
+						drawboxi2(data);
+						drawboxw1(data);
+						drawboxw2(data);
+						drawboxo1(data);
+						drawboxo2(data);
+						document.getElementById("interval").innerHTML =
+							"Interval DB : " + data[2] + "s";
+					})
+					.catch((error) => {
+						console.error("Error fetching data:", error);
+					});
+			}
+			function drawboxv1(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">VOLTAGE</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>VOLT</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[0][0][0]) + " V</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[0][0][1]) + " V</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[0][0][2]) + " V</td></tr>";
+				tableHtml += "</table>";
+				document.getElementById("boxv1").innerHTML = tableHtml;
+			}
+			function drawboxi1(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">CURRENT</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>AMPERE</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[0][1][0]) + " A</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[0][1][1]) + " A</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[0][1][2]) + " A</td></tr>";
+				tableHtml += "</table>";
+				document.getElementById("boxi1").innerHTML = tableHtml;
+			}
+
+			function drawboxw1(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">WATT</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>WATT</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[0][2][0]) + " W</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[0][2][1]) + " W</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[0][2][2]) + " W</td></tr>";
+				tableHtml += "</table>";
+				document.getElementById("boxw1").innerHTML = tableHtml;
+			}
+			function drawboxo1(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">Lainnya</div><table class="table table-hover">`;
+				tableHtml +=
+					"<tr><td>Frequency</td><td>" + f2(data[0][3]) + " Hz</td></tr>";
+				tableHtml +=
+					"<tr><td>Cos Phi</td><td>" + f2(data[0][4]) + " </td></tr>";
+				tableHtml +=
+					"<tr><td>Kwh Meter</td><td>" +
+					data[0][5][0].toFixed(2) +
+					"KwH</td></tr>";
+
+				tableHtml += "</table>";
+				document.getElementById("boxo1").innerHTML = tableHtml;
+			}
+			function drawboxv2(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">VOLTAGE</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>VOLT</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[1][0][0]) + " V</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[1][0][1]) + " V</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[1][0][2]) + ` V</td></tr>`;
+				tableHtml += "</table>";
+				document.getElementById("boxv2").innerHTML = tableHtml;
+			}
+
+			function drawboxi2(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">CURRENT</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>AMPERE</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[1][1][0]) + " A</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[1][1][1]) + " A</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[1][1][2]) + " A</td></tr>";
+				tableHtml += "</table>";
+				document.getElementById("boxi2").innerHTML = tableHtml;
+			}
+			function drawboxw2(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">WATT</div><table class="table table-hover">`;
+				tableHtml += "<tr><th>PHASE</th><th>WATT</th></tr>";
+				tableHtml += "<tr><td>R</td><td>" + f2(data[1][2][0]) + " W</td></tr>";
+				tableHtml += "<tr><td>S</td><td>" + f2(data[1][2][1]) + " W</td></tr>";
+				tableHtml += "<tr><td>T</td><td>" + f2(data[1][2][2]) + " W</td></tr>";
+				tableHtml += "</table>";
+				document.getElementById("boxw2").innerHTML = tableHtml;
+			}
+
+			function drawboxo2(data) {
+				var tableHtml = `<div style="margin-top: 0px; margin-bottom: 20px">Lainnya</div><table class="table table-hover">`;
+				tableHtml +=
+					`<tr><td id="left">Frequency</td><td>` +
+					f2(data[1][3]) +
+					` Hz</td></tr>`;
+				tableHtml +=
+					`<tr><td id="left">Cos Phi</td><td>` + f2(data[1][4]) + ` </td></tr>`;
+				tableHtml +=
+					`<tr><td id="left">Kwh Meter</td><td>` +
+					data[1][5][0].toFixed(2) +
+					`KwH</td></tr>`;
+
+				tableHtml += `</table>`;
+				document.getElementById("boxo2").innerHTML = tableHtml;
+			}
+		</script>
+	</body>
+</html>

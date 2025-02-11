@@ -1,0 +1,1617 @@
+[
+    {
+        "id": "1c46e54be69facbb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "66d56f7ed8124428",
+        "type": "group",
+        "z": "1c46e54be69facbb",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "cdbcbc63eb87f0be",
+            "162079d047f89660",
+            "204415dece6180d1",
+            "33baf8aa185a013e",
+            "e8017ebec3e7d4af",
+            "e2e7364a4de1da4b",
+            "53b6675410f0e110",
+            "d57b3a8ef917b3fb",
+            "a67f0645cb8f45c0",
+            "a22d2279292e7b82",
+            "ac45914ed3545307",
+            "c52c7cce02e32ef6",
+            "eddb1ed2e1d8a1ce",
+            "b1813ba9ae05d0a0",
+            "4c9163e8a6a8d97b",
+            "d930558273498aad",
+            "0322564b20a6de32",
+            "a55c7e9dcc39bce3",
+            "57e3ed6a5a35a4cd",
+            "bf4a7987e54ef138",
+            "f8fcc28cc9583f2d",
+            "a3c249ec8b336c34",
+            "0ede1b9ec9bec952",
+            "27b45492ee3ce6d4"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 432,
+        "h": 762
+    },
+    {
+        "id": "4a80b48974979941",
+        "type": "group",
+        "z": "1c46e54be69facbb",
+        "name": "grup simulasi",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8bbd9977d55b96f6",
+            "530c40e3d623ac23",
+            "6c06624bc70ea0ea",
+            "460e7e002120e2cf",
+            "b239eabc54d2454e",
+            "d30f8a6a4a3e4f46",
+            "07d10f4fc29e0426",
+            "aa452f1117594942",
+            "803939684e8bbb5d",
+            "21de24584c409641",
+            "98370383e35df473",
+            "5c6ebbaf75e71326",
+            "ddb1f485c89755c8",
+            "5e425850bdd8c896",
+            "5cb54d3d22605fae",
+            "64144f1dfbc5e8e8",
+            "019fe28106bbe162",
+            "4fc164ab52b40782",
+            "44043dcdab654de1",
+            "4e812366037d404f",
+            "dcdd5dbcf152c4ca",
+            "c8e737085f80d66a",
+            "c1841f83b6e7d023",
+            "1debb7fc978a9655",
+            "03a10f7e1b25d850",
+            "69b8546a852b3f84",
+            "549535983a1d308d",
+            "1a87b2f12e82ebde"
+        ],
+        "x": 494,
+        "y": 39,
+        "w": 512,
+        "h": 642
+    },
+    {
+        "id": "cdbcbc63eb87f0be",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_v",
+        "topic": "acvout",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "3027",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "eddb1ed2e1d8a1ce"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "162079d047f89660",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p2_v",
+        "topic": "acvout",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3027",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "57e3ed6a5a35a4cd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "204415dece6180d1",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_i",
+        "topic": "acvout",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "2999",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "b1813ba9ae05d0a0"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "33baf8aa185a013e",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p2_i",
+        "topic": "acvout",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "2999",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "bf4a7987e54ef138"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e8017ebec3e7d4af",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_w",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "3053",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "4c9163e8a6a8d97b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e2e7364a4de1da4b",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p2_w",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3053",
+        "quantity": "6",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "f8fcc28cc9583f2d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "53b6675410f0e110",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_f",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "3109",
+        "quantity": "2",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "d930558273498aad"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d57b3a8ef917b3fb",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p2_f",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3109",
+        "quantity": "2",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "a3c249ec8b336c34"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a67f0645cb8f45c0",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_q",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3191",
+        "quantity": "2",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "0ede1b9ec9bec952"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a22d2279292e7b82",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_q",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "HoldingRegister",
+        "adr": "3191",
+        "quantity": "2",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "0322564b20a6de32"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ac45914ed3545307",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p1_p",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3203",
+        "quantity": "8",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "a55c7e9dcc39bce3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c52c7cce02e32ef6",
+        "type": "modbus-read",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "p2_p",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "3203",
+        "quantity": "2",
+        "rate": "1000",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "979e1475968793bc",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "27b45492ee3ce6d4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "eddb1ed2e1d8a1ce",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global + time pm1",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=[];\nt[0]=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(1));\nt[1]=parseFloat(toFloat(msg.payload[2],msg.payload[3]).toFixed(1));\nt[2]=parseFloat(toFloat(msg.payload[4],msg.payload[5]).toFixed(1));\nglobal.set(\"pm1[0]\",t);\nlet now=new Date();\nglobal.set(\"timepm1\",now.valueOf());\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1813ba9ae05d0a0",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=[];\nt[0]=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(1));\nt[1]=parseFloat(toFloat(msg.payload[2],msg.payload[3]).toFixed(1));\nt[2]=parseFloat(toFloat(msg.payload[4],msg.payload[5]).toFixed(1));\n\nglobal.set(\"pm1[1]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c9163e8a6a8d97b",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2) {\n    var combinedData = (data1 << 16) | data2;\n    var buffer = new ArrayBuffer(4);\n    var view = new DataView(buffer);\n    view.setInt32(0, combinedData, true);\n    var floatValue = view.getFloat32(0, true);\n    return floatValue;\n}\nlet t = [];\nt[0] = parseFloat(toFloat(msg.payload[0], msg.payload[1]).toFixed(1));\nt[1] = parseFloat(toFloat(msg.payload[2], msg.payload[3]).toFixed(1));\nt[2] = parseFloat(toFloat(msg.payload[4], msg.payload[5]).toFixed(1));\nglobal.set(\"pm1[2]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d930558273498aad",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm1[3]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0322564b20a6de32",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm1[4]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a55c7e9dcc39bce3",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true);\n  var floatValue = view.getFloat32(0, true);\n  return floatValue;\n}\nlet t = parseFloat(toFloat(msg.payload[0], msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm1[5][0]\", t);\nreturn msg;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57384b1e1b85273f",
+        "type": "http in",
+        "z": "1c46e54be69facbb",
+        "name": "",
+        "url": "/live",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 560,
+        "y": 780,
+        "wires": [
+            [
+                "5037e48338bc5301"
+            ]
+        ]
+    },
+    {
+        "id": "5037e48338bc5301",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "name": "serve data live",
+        "func": "msg.payload=[];\nmsg.payload[0]=global.get(\"pm1\");\nmsg.payload[1]=global.get(\"pm2\");\nmsg.payload[2]=global.get(\"interval\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 780,
+        "wires": [
+            [
+                "228a33c0bf1b5664"
+            ]
+        ]
+    },
+    {
+        "id": "228a33c0bf1b5664",
+        "type": "http response",
+        "z": "1c46e54be69facbb",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 910,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "57e3ed6a5a35a4cd",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global + timepm2",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=[];\nt[0]=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(1));\nt[1]=parseFloat(toFloat(msg.payload[2],msg.payload[3]).toFixed(1));\nt[2]=parseFloat(toFloat(msg.payload[4],msg.payload[5]).toFixed(1));\nglobal.set(\"pm2[0]\",t);\n\n\nlet now=new Date();\nglobal.set(\"timepm2\",now.valueOf());\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf4a7987e54ef138",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=[];\nt[0]=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(1));\nt[1]=parseFloat(toFloat(msg.payload[2],msg.payload[3]).toFixed(1));\nt[2]=parseFloat(toFloat(msg.payload[4],msg.payload[5]).toFixed(1));\n\nglobal.set(\"pm2[1]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8fcc28cc9583f2d",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2) {\n    var combinedData = (data1 << 16) | data2;\n    var buffer = new ArrayBuffer(4);\n    var view = new DataView(buffer);\n    view.setInt32(0, combinedData, true);\n    var floatValue = view.getFloat32(0, true);\n    return floatValue;\n}\nlet t = [];\nt[0] = parseFloat(toFloat(msg.payload[0], msg.payload[1]).toFixed(1));\nt[1] = parseFloat(toFloat(msg.payload[2], msg.payload[3]).toFixed(1));\nt[2] = parseFloat(toFloat(msg.payload[4], msg.payload[5]).toFixed(1));\nglobal.set(\"pm2[2]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3c249ec8b336c34",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm2[3]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ede1b9ec9bec952",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2 ) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true); \n  var floatValue = view.getFloat32(0, true); \n  return floatValue;\n}\nlet t=parseFloat(toFloat(msg.payload[0],msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm2[4]\",t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27b45492ee3ce6d4",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "66d56f7ed8124428",
+        "name": "save to global",
+        "func": "function toFloat(data1, data2) {\n  var combinedData = (data1 << 16) | data2;\n  var buffer = new ArrayBuffer(4);\n  var view = new DataView(buffer);\n  view.setInt32(0, combinedData, true);\n  var floatValue = view.getFloat32(0, true);\n  return floatValue;\n}\nlet t = parseFloat(toFloat(msg.payload[0], msg.payload[1]).toFixed(2));\n\nglobal.set(\"pm2[5][0]\", t);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e95ba376915915e5",
+        "type": "http request",
+        "z": "1c46e54be69facbb",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "127.0.0.1/mockup/insert.php",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "application/json",
+                "valueValue": ""
+            }
+        ],
+        "x": 510,
+        "y": 860,
+        "wires": [
+            [
+                "d801430bae3c084a",
+                "1b88ef180c2c99cd"
+            ]
+        ]
+    },
+    {
+        "id": "897b23cfd7bfc3b6",
+        "type": "inject",
+        "z": "1c46e54be69facbb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "c43f7fc298f927b0",
+                "1fdea076710c1738"
+            ]
+        ]
+    },
+    {
+        "id": "c43f7fc298f927b0",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "name": "call insert php",
+        "func": "\n    msg.payload = [];\n    msg.payload[0] = global.get(\"pm1\");\n    msg.payload[1] = global.get(\"pm2\");\n    msg.payload[2] = global.get(\"interval\");\n    return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 860,
+        "wires": [
+            [
+                "e95ba376915915e5"
+            ]
+        ]
+    },
+    {
+        "id": "4096844fe8d8a5d8",
+        "type": "inject",
+        "z": "1c46e54be69facbb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 590,
+        "y": 720,
+        "wires": [
+            [
+                "fdcc78b5e55919bc"
+            ]
+        ]
+    },
+    {
+        "id": "fdcc78b5e55919bc",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "name": "inisialisasi variable",
+        "func": "\nglobal.set(\"timepm1\",0);\nglobal.set(\"timepm2\",0);\n\nglobal.set(\"pm1[0][0]\",-1);\nglobal.set(\"pm1[0][1]\",-1);\nglobal.set(\"pm1[0][2]\",-1);\nglobal.set(\"pm1[1][0]\",-1);\nglobal.set(\"pm1[1][1]\",-1);\nglobal.set(\"pm1[1][2]\",-1);\nglobal.set(\"pm1[2][0]\",-1);\nglobal.set(\"pm1[2][1]\",-1);\nglobal.set(\"pm1[2][2]\",-1);\nglobal.set(\"pm1[3]\",-1);\nglobal.set(\"pm1[4]\",-1);\nglobal.set(\"pm1[5][0]\", -1);\n\nglobal.set(\"pm2[0][0]\",-1);\nglobal.set(\"pm2[0][1]\",-1);\nglobal.set(\"pm2[0][2]\",-1);\nglobal.set(\"pm2[1][0]\",-1);\nglobal.set(\"pm2[1][1]\",-1);\nglobal.set(\"pm2[1][2]\",-1);\nglobal.set(\"pm2[2][0]\",-1);\nglobal.set(\"pm2[2][1]\",-1);\nglobal.set(\"pm2[2][2]\",-1);\nglobal.set(\"pm2[3]\",-1);\nglobal.set(\"pm2[4]\",-1);\nglobal.set(\"pm2[5][0]\", -1);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bbd9977d55b96f6",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "v",
+        "low": "210",
+        "high": "230",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 80,
+        "wires": [
+            [
+                "b239eabc54d2454e"
+            ]
+        ]
+    },
+    {
+        "id": "530c40e3d623ac23",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ia",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "d30f8a6a4a3e4f46"
+            ]
+        ]
+    },
+    {
+        "id": "6c06624bc70ea0ea",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ib",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 160,
+        "wires": [
+            [
+                "07d10f4fc29e0426"
+            ]
+        ]
+    },
+    {
+        "id": "460e7e002120e2cf",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ic",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "aa452f1117594942"
+            ]
+        ]
+    },
+    {
+        "id": "b239eabc54d2454e",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "v1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d30f8a6a4a3e4f46",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i1[0]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07d10f4fc29e0426",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i1[1]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa452f1117594942",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i1[2]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "803939684e8bbb5d",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "f",
+        "low": "49",
+        "high": "52",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "21de24584c409641"
+            ]
+        ]
+    },
+    {
+        "id": "21de24584c409641",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "f1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98370383e35df473",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "p",
+        "low": "0.75",
+        "high": "0.95",
+        "inte": "false",
+        "property": "payload",
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "5c6ebbaf75e71326"
+            ]
+        ]
+    },
+    {
+        "id": "5c6ebbaf75e71326",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "q1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddb1f485c89755c8",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "function 4",
+        "func": "var fr=(a,b=1)=>{\n    return parseFloat(a.toFixed(b));\n}\nvar t=new Date();\nlet m=t.valueOf()/5000;\nglobal.set(\"pm1[0][0]\",fr(flow.get(\"v1\")));\nglobal.set(\"pm1[0][1]\",fr(flow.get(\"v1\")));\nglobal.set(\"pm1[0][2]\",fr(flow.get(\"v1\")));\nglobal.set(\"pm1[1][0]\",fr(flow.get(\"i1[0]\")));\nglobal.set(\"pm1[1][1]\",fr(flow.get(\"i1[1]\")));\nglobal.set(\"pm1[1][2]\",fr(flow.get(\"i1[2]\")));\nglobal.set(\"pm1[2][0]\",fr(flow.get(\"i1[0]\") * flow.get(\"v1\")*flow.get(\"q1\")));\nglobal.set(\"pm1[2][1]\",fr(flow.get(\"i1[1]\") * flow.get(\"v1\")*flow.get(\"q1\")));\nglobal.set(\"pm1[2][2]\",fr(flow.get(\"i1[2]\") * flow.get(\"v1\")*flow.get(\"q1\")));\nglobal.set(\"pm1[3]\",fr(flow.get(\"f1\"),2) );\nglobal.set(\"pm1[4]\",fr(flow.get(\"q1\"),2) );\nglobal.set(\"pm1[5][0]\", m );\n\nlet now=new Date();\nglobal.set(\"timepm1\",now.valueOf());\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e425850bdd8c896",
+        "type": "inject",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 630,
+        "y": 80,
+        "wires": [
+            [
+                "8bbd9977d55b96f6",
+                "530c40e3d623ac23",
+                "6c06624bc70ea0ea",
+                "460e7e002120e2cf",
+                "803939684e8bbb5d",
+                "98370383e35df473",
+                "ddb1f485c89755c8"
+            ]
+        ]
+    },
+    {
+        "id": "5cb54d3d22605fae",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "v",
+        "low": "210",
+        "high": "230",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 400,
+        "wires": [
+            [
+                "44043dcdab654de1"
+            ]
+        ]
+    },
+    {
+        "id": "64144f1dfbc5e8e8",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ia",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "4e812366037d404f"
+            ]
+        ]
+    },
+    {
+        "id": "019fe28106bbe162",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ib",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 480,
+        "wires": [
+            [
+                "dcdd5dbcf152c4ca"
+            ]
+        ]
+    },
+    {
+        "id": "4fc164ab52b40782",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "ic",
+        "low": "0",
+        "high": "100",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 520,
+        "wires": [
+            [
+                "c8e737085f80d66a"
+            ]
+        ]
+    },
+    {
+        "id": "44043dcdab654de1",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "v2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e812366037d404f",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i2[0]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcdd5dbcf152c4ca",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i2[1]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8e737085f80d66a",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "i2[2]",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1841f83b6e7d023",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "f",
+        "low": "49",
+        "high": "52",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "1debb7fc978a9655"
+            ]
+        ]
+    },
+    {
+        "id": "1debb7fc978a9655",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "f2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03a10f7e1b25d850",
+        "type": "random",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "p",
+        "low": "0.75",
+        "high": "0.95",
+        "inte": "false",
+        "property": "payload",
+        "x": 750,
+        "y": 600,
+        "wires": [
+            [
+                "69b8546a852b3f84"
+            ]
+        ]
+    },
+    {
+        "id": "69b8546a852b3f84",
+        "type": "change",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "q2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "549535983a1d308d",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "function 5",
+        "func": "var fr=(a,b=1)=>{\n    return parseFloat(a.toFixed(b));\n}\nvar t=new Date();\nlet m=t.valueOf()/5000;\nglobal.set(\"pm2[0][0]\",fr(flow.get(\"v2\")));\nglobal.set(\"pm2[0][1]\",fr(flow.get(\"v2\")));\nglobal.set(\"pm2[0][2]\",fr(flow.get(\"v2\")));\nglobal.set(\"pm2[1][0]\",fr(flow.get(\"i2[0]\")));\nglobal.set(\"pm2[1][1]\",fr(flow.get(\"i2[1]\")));\nglobal.set(\"pm2[1][2]\",fr(flow.get(\"i2[2]\")));\nglobal.set(\"pm2[2][0]\",fr(flow.get(\"i2[0]\") * flow.get(\"v2\")*flow.get(\"q2\")));\nglobal.set(\"pm2[2][1]\",fr(flow.get(\"i2[1]\") * flow.get(\"v2\")*flow.get(\"q2\")));\nglobal.set(\"pm2[2][2]\",fr(flow.get(\"i2[2]\") * flow.get(\"v2\")*flow.get(\"q2\")));\nglobal.set(\"pm2[3]\",fr(flow.get(\"f2\"),2 ));\nglobal.set(\"pm2[4]\",fr(flow.get(\"q2\"),2 ));\nglobal.set(\"pm2[5][0]\", m );\n\nlet now=new Date();\nglobal.set(\"timepm2\",now.valueOf());\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a87b2f12e82ebde",
+        "type": "inject",
+        "z": "1c46e54be69facbb",
+        "g": "4a80b48974979941",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "5cb54d3d22605fae",
+                "64144f1dfbc5e8e8",
+                "019fe28106bbe162",
+                "4fc164ab52b40782",
+                "c1841f83b6e7d023",
+                "03a10f7e1b25d850",
+                "549535983a1d308d"
+            ]
+        ]
+    },
+    {
+        "id": "1fdea076710c1738",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "name": "set zero when timeout",
+        "func": "if (global.get(\"timepm1\") + 5000 < msg.payload) {\n    global.set(\"pm1[0][0]\", -1);\n    global.set(\"pm1[0][1]\", -1);\n    global.set(\"pm1[0][2]\", -1);\n    global.set(\"pm1[1][0]\", -1);\n    global.set(\"pm1[1][1]\", -1);\n    global.set(\"pm1[1][2]\", -1);\n    global.set(\"pm1[2][0]\", -1);\n    global.set(\"pm1[2][1]\", -1);\n    global.set(\"pm1[2][2]\", -1);\n    global.set(\"pm1[3]\", -1);\n    global.set(\"pm1[4]\", -1);\n    global.set(\"pm1[5][0]\", -1);\n}\nif (global.get(\"timepm2\") + 5000 < msg.payload) {\n    global.set(\"pm2[0][0]\", -1);\n    global.set(\"pm2[0][1]\", -1);\n    global.set(\"pm2[0][2]\", -1);\n    global.set(\"pm2[1][0]\", -1);\n    global.set(\"pm2[1][1]\", -1);\n    global.set(\"pm2[1][2]\", -1);\n    global.set(\"pm2[2][0]\", -1);\n    global.set(\"pm2[2][1]\", -1);\n    global.set(\"pm2[2][2]\", -1);\n    global.set(\"pm2[3]\", -1);\n    global.set(\"pm2[4]\", -1);\n    global.set(\"pm2[5][0]\", -1);\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d801430bae3c084a",
+        "type": "debug",
+        "z": "1c46e54be69facbb",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "1b88ef180c2c99cd",
+        "type": "function",
+        "z": "1c46e54be69facbb",
+        "name": "save interval",
+        "func": "if(msg.payload.startsWith(\"cfg\")){\n    global.set(\"interval\", msg.payload.substring(4));\n  }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "979e1475968793bc",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "serial",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "COM7",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": false,
+        "showWarnings": true,
+        "showLogs": true
+    }
+]
